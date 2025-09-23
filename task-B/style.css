@@ -1,0 +1,33 @@
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #c5bb28;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1, h2 {
+  color: rgb(17, 103, 153);
+}
+p {
+  color: #131313;
+  max-width: 600px; 
+  text-align: center;
+}
+ul, ol {
+  max-width: 600px;
+  margin: 10px 0;
+  padding-left: 40px;
+  color: #003366;
+}
+a {
+  color: #e60000;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*
+Author: Eeli Östberg
+Date: 2025-09-23
+*/
