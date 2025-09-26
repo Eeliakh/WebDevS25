@@ -4,7 +4,12 @@ body {
 }
 h1 {
   color: rgb(112, 49, 49);
+  font-size: larger;
 }
+p {
+  color: rgb(180, 158, 61);
+}
+
 /*
 Author: Eeli Östberg
 Date: 2025-09-23
