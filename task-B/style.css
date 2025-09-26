@@ -10,22 +10,31 @@ body {
 }
 h1, h2 {
   color: rgb(17, 103, 153);
+  font-size: x-large;
 }
 p {
   color: #131313;
   max-width: 600px; 
   text-align: center;
+  font-style: italic;
+  border-style: dashed;
+  border-color: #3575b6;
 }
 ul, ol {
   max-width: 600px;
   margin: 10px 0;
   padding-left: 40px;
   color: #003366;
+  font-style: italic;
+  font-style: oblique;
+  text-align: center;
 }
 a {
-  color: #e60000;
+  color: #a80000;
   text-decoration: none;
   font-weight: bold;
+  font-style: italic;
+  text-align: center;
 }
 /*
 Author: Eeli Östberg
