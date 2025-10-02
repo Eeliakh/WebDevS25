@@ -1,0 +1,62 @@
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #c5bb28;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2 {
+  color: rgb(17, 103, 153);
+  font-size: x-large;
+}
+
+p {
+  color: #295792;
+  max-width: 600px; 
+  text-align: center;
+  font-style: italic;
+  border-color: #3575b6;
+}
+
+
+ul, ol {
+  max-width: 600px;
+  margin: 10px 0;
+  padding-left: 40px;
+  color: #003366;
+  font-style: oblique;
+  text-align: center;
+}
+
+
+a {
+  color: #a80000;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+img, video {
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+}
+
+section {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+Author: Eeli Östberg
+Date: 2025-09-23
+*/
