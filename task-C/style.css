@@ -41,10 +41,29 @@ a {
   text-align: center;
 }
 
-img, video {
+img {
   max-width: 100%;
   width: 100%;
   max-width: 500px;
+  height: auto;
+  border: 2px solid #006eff;
+  display: block;
+  margin: 20px auto;
+}
+video {
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  height: 890px;
+  border: 2px solid #006eff;
+  display: block;
+  margin: 20px auto;
+}
+audio {
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  height: 90px;
   display: block;
   margin: 20px auto;
 }
