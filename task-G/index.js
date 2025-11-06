@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     Object.values(errors).forEach(errorElem => {
       errorElem.textContent = '';
     });
+    }
 
     function validate() {
         clearErrors();
-        let Valid = true;}
+        let Valid = true;
 
         // Full name validation
         if (fields.fullname.value.trim() === '') {
