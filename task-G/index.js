@@ -3,7 +3,7 @@
 // Date: 2025-11-06
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById('Registeration Form');
+  const form = document.getElementById('addCourseForm');
   const tbody = document.querySelector('#timetable tbody');
 
   const fields = {
