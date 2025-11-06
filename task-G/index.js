@@ -8,25 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fields = {
     fullname: document.getElementById('fullname'),
-    email: document.getElementById('email'),
-    phone: document.getElementById('phone'),
+    email: document.getElementById('Email'),
+    phone: document.getElementById('Number'),
     birthdate: document.getElementById('birthdate'),
-    acceptedTerms: document.getElementById('acceptedTerms'),
+    acceptedTerms: document.getElementById('terms'),
   };
+
+  const table = document.getElementById('timetable');
 
   const errors = {
     fullname: document.getElementById('fullnameError'),
     email: document.getElementById('emailError'),
     phone: document.getElementById('phoneError'),
     birthdate: document.getElementById('birthdateError'),
-    acceptedTerms: document.getElementById('acceptedTermsError'),
+    acceptedTerms: document.getElementById('termsError'),
   };
 
   function clearErrors() {
-    Object.values(errors).forEach(errorElem => {
-      errorElem.textContent = '';
+    Object.values(errors).forEach(errorElement => {
+      errorElement.textContent = '';
     });
-    }
+  }
 
     function validate() {
         clearErrors();
@@ -67,23 +69,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!validate()) return;
 
-    //fill timestamp
     const timestamp = new Date().toLocaleString();
-    document.getElementById('timestamp').value = timestamp;
+    const tbody = table.querySelector('tbody');
 
-    // Create new table row
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${timestamp}</td>
       <td>${fields.fullname.value.trim()}</td>
-        <td>${fields.email.value.trim()}</td>
-        <td>${fields.phone.value.trim()}</td>
-        <td>${fields.birthdate.value}</td>
-        <td>${fields.acceptedTerms.checked ? 'Yes' : 'No'}</td>
+      <td>${fields.email.value.trim()}</td>
+      <td>${fields.phone.value.trim()}</td>
+      <td>${fields.birthdate.value}</td>
+      <td>${fields.acceptedTerms.checked ? 'Yes' : 'No'}</td>
     `;
-    table.appendChild(row);
 
-    // Reset form
+    tbody.appendChild(row);
+
     form.reset();
+    clearErrors();
   });
 });

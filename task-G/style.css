@@ -111,6 +111,11 @@ body {
   border: 1px solid var(--border);
   border-radius: 6px;
 }
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
 
 .days-group {
   margin: 0.5rem 0 0.75rem;
