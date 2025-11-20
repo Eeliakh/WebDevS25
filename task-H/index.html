@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly Timetable</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = { darkMode: 'class' }
+</script>
+<script src="index.js" defer></script>
+<script src="darkmode.js" defer></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+
+  <!--
+    Author: Eeli Östberg
+    Date: 2025-11-13
+  -->
+<header class="bg-blue-900 text-white py-6 text-center dark:bg-slate-800">  
+  <div class="flex justify-center items-center gap-4">
+    <h1 class="text-3xl font-bold">Registration Page</h1>
+    <button id="darkModeToggle"
+      class="bg-slate-200 text-slate-800 px-3 py-1 rounded-md text-sm hover:bg-slate-300
+             dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 transition">
+      🌙 / ☀️
+    </button>
+  </div>
+</header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      
+      <!-- Student Info -->
+      <section class="bg-white border border-slate-300 rounded-2xl shadow-sm p-6 dark:bg-slate-800 dark:border-slate-600">
+
+        <h2 class="text-xl font-semibold mb-3 text-slate-700">Information</h2>
+        <p class="text-lg font-medium text-slate-800"><span class="student-name">Eeli Östberg</span></p>
+        <p class="text-slate-600"><span class="student-group">NTIS22K</span></p>
+      </section>
+
+      <!-- Form Section -->
+      <section class="bg-white border border-slate-300 rounded-2xl shadow-sm p-6 dark:bg-slate-800 dark:border-slate-600">
+
+        <h2 class="text-xl font-semibold mb-3 text-slate-700">Information Form</h2>
+
+        <form id="addCourseForm" novalidate class="space-y-4">
+          
+          <!-- Full name -->
+          <div>
+            <label for="fullname" class="block font-medium mb-1">Full name</label>
+            <input id="fullname" name="fullname" type="text" required
+              placeholder="e.g., Eeli Östberg"
+              class="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500" />
+            <p id="fullnameError" class="text-red-600 text-sm mt-1 "></p>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="Email" class="block font-medium mb-1">Email</label>
+            <input id="Email" name="Email" type="text" required
+              placeholder="e.g., name.surname@centria.fi"
+              class="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500" />
+            <p id="emailError" class="text-red-600 text-sm mt-1 "></p>
+          </div>
+
+          <!-- Phone number -->
+          <div>
+            <label for="Number" class="block font-medium mb-1">Phone Number</label>
+            <input id="Number" name="Number" type="text" required
+              placeholder="e.g., +358401234567"
+              class="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500" />
+            <p id="phoneError" class="text-red-600 text-sm mt-1 "></p>
+          </div>
+
+          <!-- Birth Date -->
+          <div>
+            <label for="birthdate" class="block font-medium mb-1">Birth Date</label>
+            <input id="birthdate" name="birthdate" type="date" required
+              class="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500" />
+            <p id="birthdateError" class="text-red-600 text-sm mt-1 "></p>
+          </div>
+
+          <!-- Terms -->
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="terms" name="terms" required
+              class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
+            <label for="terms" class="text-sm text-slate-700">I accept the terms and conditions</label>
+          </div>
+          <p id="termsError" class="text-red-600 text-sm mt-1 "></p>
+
+          <!-- Buttons -->
+          <div class="flex gap-3 pt-2">
+            <button id="addRowBtn" type="submit"
+              class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 transition">
+
+              Submit
+            </button>
+            <button id="clearBtn" type="reset"
+              class="border border-slate-300 bg-white px-4 py-2 rounded-md hover:bg-slate-50 dark:bg-slate-700 dark:border-slate-500 dark:hover:bg-slate-600 transition">
+              Clear
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white border border-slate-300 rounded-2xl shadow-sm p-6 overflow-x-auto dark:bg-slate-800 dark:border-slate-600">
+      <table id="timetable" class="min-w-full border-collapse text-left">
+        <thead>
+          <tr class="bg-blue-900 text-white dark:bg-slate-700">
+            <th class="p-3 font-semibold">Timestamp</th>
+            <th class="p-3 font-semibold">Full name</th>
+            <th class="p-3 font-semibold">Email</th>
+            <th class="p-3 font-semibold">Phone Number</th>
+            <th class="p-3 font-semibold">Birth Date</th>
+            <th class="p-3 font-semibold">Accepted Terms</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 text-slate-700">
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
