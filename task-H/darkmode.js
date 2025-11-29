@@ -4,14 +4,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("darkModeToggle");
-  const body = document.body;
+  const html = document.documentElement; // <html> element
 
   if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark");
+    html.classList.add("dark");
   }
 
   toggleButton.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+    html.classList.toggle("dark");
+    localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
   });
 });
