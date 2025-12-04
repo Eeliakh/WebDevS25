@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookings – AUTOFIXER</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <h1>Bookings</h1>
+    <p class="subtitle">Vehicle Reservations</p>
+</header>
+
+<nav class="top-menu">
+    <a href="index.html" class="menu-btn">Home</a>
+    <a href="catalog.html" class="menu-btn">Catalog</a>
+    <a href="bookings.html" class="menu-btn active">Bookings</a>
+</nav>
+
+<main class="main-wrapper">
+
+    <section class="form-section">
+        <h2>Book Your Ride</h2>
+        <form id="rentalForm" novalidate>
+            <div class="form-row">
+                <label for="fullname">Full Name</label>
+                <input id="fullname" name="fullname" type="text" placeholder="e.g., V">
+                <div class="error" id="fullnameError">Please enter your full name.</div>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="e.g., v@nightcity.com">
+                <div class="error" id="emailError">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-row">
+                <label for="vehicle">Vehicle</label>
+                <select id="vehicle" name="vehicle">
+                    <option value="">Select vehicle</option>
+                    <option>Delamain Cab</option>
+                    <option>Mizutani Shion</option>
+                    <option>Mizutani Shion "Coyote"</option>
+                    <option>Rayfield Caliburn</option>
+                    <option>Quadra Turbo-R740 V-Tech</option>
+                    <option>Quadra Type-66 640 TS</option>
+                    <option>Quadra Type-66 22 Javelina</option>
+                    <option>ARCH Nazare</option>
+                    <option>Yaiba Kusanagi CT-3X</option>
+                    <option>Yaiba ASM-R250 Muramasa</option>
+                    <option>Brennan Apollo</option>
+                </select>
+                <div class="error" id="vehicleError">Please select a vehicle.</div>
+            </div>
+
+            <div class="form-row">
+                <label for="date">Rental Date</label>
+                <input id="date" name="date" type="date">
+                <div class="error" id="dateError">Please select a rental date.</div>
+            </div>
+
+            <div class="form-row terms-row">
+                <label for="terms">I accept the terms and conditions <input type="checkbox" id="terms" name="terms"></label>
+                <div class="error" id="termsError">You must accept the terms.</div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn">Book Now</button>
+            </div>
+            <div class="form-row">
+                <button type="reset" class="btn btn-secondary">Clear</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="table-section">
+        <h2>Current Bookings</h2>
+        <table id="bookingsTable">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Vehicle</th>
+                    <th>Date</th>
+                    <th>Accepted Terms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="placeholder-row">
+                    <td colspan="6" style="text-align:center; color:#888;">No bookings yet</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Cyberpunk-style demo website.</p>
+</footer>
+
+</body>
+</html>

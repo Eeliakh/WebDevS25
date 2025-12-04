@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOFIXER – Home</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <h1>AUTOFIXER</h1>
+    <p class="subtitle">Inspired by Cyberpunk 2077</p>
+</header>
+
+<nav class="top-menu">
+    <a href="index.html" class="menu-btn active">Home</a>
+    <a href="catalog.html" class="menu-btn">Catalog</a>
+    <a href="bookings.html" class="menu-btn">Bookings</a>
+</nav>
+
+<main class="main-wrapper">
+
+<!-- SLIDESHOW -->
+<section class="slideshow-section">
+    <h6 class="visually-hidden">Vehicle Slideshow</h6>
+    <div class="slideshow-container">
+
+        <div class="slide fade">
+            <img src="pics/delamain.webp" alt="Delamain Cab">
+            <div class="slide-caption">Delamain Cab – Autonomous Taxi</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="pics/MizutaniCar.webp" alt="Mizutani Shion">
+            <div class="slide-caption">Mizutani Shion – Sports Car</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="pics/caliburn.webp" alt="Rayfield Caliburn">
+            <div class="slide-caption">Rayfield Caliburn – Luxury Sports Car</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="pics/R740.webp" alt="Quadra Turbo-R740 V-Tech">
+            <div class="slide-caption">Quadra Turbo-R740 V-Tech – Muscle Car</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="pics/Nazare.webp" alt="ARCH Nazare">
+            <div class="slide-caption">ARCH Nazare – Motorcycle</div>
+        </div>
+
+        <!-- Next / Prev -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Cyberpunk-style demo website. All rights reserved.</p>
+</footer>
+
+<!-- SLIDESHOW JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    function showSlides(n) {
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[slideIndex].style.display = 'block';
+    }
+
+    prev.addEventListener('click', () => {
+        slideIndex--;
+        showSlides(slideIndex);
+    });
+
+    next.addEventListener('click', () => {
+        slideIndex++;
+        showSlides(slideIndex);
+    });
+
+    function autoSlide() {
+        slideIndex++;
+        showSlides(slideIndex);
+        setTimeout(autoSlide, 5000);
+    }
+
+    showSlides(slideIndex);
+    autoSlide();
+});
+</script>
+
+</body>
+</html>

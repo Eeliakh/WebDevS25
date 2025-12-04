@@ -1,0 +1,356 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: #0a0a0a;
+    color: #f0f0f0;
+}
+.site-header {
+    text-align: center;
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    border-bottom: 2px solid #00ffff;
+    padding: 1em 0;
+    box-shadow: 0 0 15px #00ffff66;
+}
+
+.site-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+    margin: 0;
+}
+
+.site-header .subtitle {
+    font-size: 1.2em;
+    color: #ff00ff;
+    text-shadow: 0 0 8px #ff00ff88;
+    margin-top: 0.2em;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background: #111;
+    padding: 0.8em 0;
+    box-shadow: 0 0 10px #00ffff44 inset;
+}
+.menu-btn {
+    padding: 0.6em 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    color: #00ffff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.menu-btn.active {
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 12px #00ffff;
+}
+.menu-btn:hover {
+    background: #ff00ff;
+    color: #fff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+.visually-hidden {
+    position: absolute !important;
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    white-space: nowrap; 
+    border: 0;
+}
+
+.main-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.hero-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-top: 0.5em;
+}
+
+
+.form-section {
+    background: #000000;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff44;
+    margin-bottom: 3em;
+}
+
+.form-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff00ff;
+    text-shadow: 0 0 8px #ff00ff;
+    margin-bottom: 1em;
+}
+
+.form-row {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 0.6em;
+    border-radius: 5px;
+    border: 1px solid #00ffff;
+    background: #272626;
+    color: #fff;
+    font-size: 1em;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff00ff;
+    box-shadow: 0 0 8px #ff00ff;
+}
+
+
+.error {
+    color: #ff00aa;
+    font-size: 0.85em;
+    margin-top: 0.3em;
+    display: none;
+}
+
+
+.btn {
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 10px #00ffff;
+    margin-right: 0.5em;
+}
+
+.btn:hover {
+    background: #ff00ff;
+    color: #fff;
+    box-shadow: 0 0 12px #ff00ff;
+}
+
+.btn-secondary {
+    background: #444;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #666;
+}
+
+
+.table-section {
+    background: #111;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff44;
+    margin-bottom: 2em;
+}
+
+.table-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th, td {
+    padding: 0.8em;
+    border-bottom: 1px solid #444;
+    text-align: left;
+}
+
+th {
+    background: #222;
+    color: #00ffff;
+}
+
+tr:hover {
+    background: #222;
+}
+
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    margin: 2em 0;
+}
+
+.vehicle-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 0 15px #ff00ff44, 0 0 10px #00ffff44 inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.8em;
+}
+
+.vehicle-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    margin-bottom: 0.5em;
+}
+
+.vehicle-card p {
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 0.5em;
+}
+
+.vehicle-card ul {
+    font-size: 0.9em;
+    color: #aaa;
+    padding-left: 1.2em;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ffff, 0 0 20px #ff00ff;
+}
+
+
+.site-footer {
+    text-align: center;
+    padding: 1em;
+    background: #111;
+    color: #888;
+    border-top: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff44 inset;
+    font-size: 0.9em;
+}
+
+
+@media (max-width: 768px) {
+    .top-menu {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .main-wrapper {
+        width: 95%;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+/* --- MODEL --- */
+#vehicleModel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#vehicleModel .model-content {
+    background: #111;
+    padding: 1.5em;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 0 20px #00ffff, 0 0 20px #ff00ff;
+}
+
+#vehicleModel .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #00ffff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#vehicleModel .close-btn:hover {
+    color: #ff00ff;
+}
+
+#vehicleModel .model-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#vehicleModel .model-body img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+/* Lievempi hover-efekti slide-kuville */
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.slide:hover img {
+    transform: scale(1.00); /* vain kevyt zoom */
+    box-shadow: 0 0 10px #00ffff, 0 0 10px #ff00ff; /* lievempi neon-hehku */
+}
+
+/* Caption lievempi neon-hehku hoverilla */
+.slide-caption {
+    transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+.slide:hover .slide-caption {
+    color: #ff00ff;
+    text-shadow:
+        0 0 2px #ff00ff,
+        0 0 5px #00ffff;
+}
