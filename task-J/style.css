@@ -97,7 +97,7 @@ body {
 
 
 .form-section {
-    background: #111;
+    background: #000000;
     padding: 1.5em;
     border-radius: 8px;
     box-shadow: 0 0 15px #00ffff44;
@@ -126,7 +126,7 @@ input, select {
     padding: 0.6em;
     border-radius: 5px;
     border: 1px solid #00ffff;
-    background: #0d0d0d;
+    background: #272626;
     color: #fff;
     font-size: 1em;
 }
