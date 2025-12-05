@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // ===== BOOKING FORM VALIDATION =====
+// ===== BOOKING FORM VALIDATION =====
     const form = document.getElementById('rentalForm');
     const tableBody = document.querySelector('#bookingsTable tbody');
 
@@ -14,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value.trim();
         const vehicle = document.getElementById('vehicle').value;
         const date = document.getElementById('date').value;
+        const returnDate = document.getElementById('returnDate').value;
         const termsAccepted = document.getElementById('terms').checked;
 
         const nameError = document.getElementById('fullnameError');
         const emailError = document.getElementById('emailError');
         const vehicleError = document.getElementById('vehicleError');
         const dateError = document.getElementById('dateError');
+        const returnDateError = document.getElementById('returnDateError');
         const termsError = document.getElementById('termsError');
 
         // Name
@@ -31,6 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!vehicle) { vehicleError.style.display = 'block'; valid = false; } else { vehicleError.style.display = 'none'; }
         // Date
         if (!date) { dateError.style.display = 'block'; valid = false; } else { dateError.style.display = 'none'; }
+        // Return Date
+        if (!returnDate) {
+            returnDateError.textContent = "Please select a return date.";
+            returnDateError.style.display = "block";
+            valid = false;
+        }
+        else if (new Date(returnDate) < new Date(date)) {
+            returnDateError.textContent = "Return date cannot be earlier than rental date.";
+            returnDateError.style.display = "block";
+            valid = false;}
+        else {
+            returnDateError.style.display = "none";}
+            
         // Terms
         if (!termsAccepted) { termsError.style.display = 'block'; valid = false; } else { termsError.style.display = 'none'; }
 
@@ -48,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${email}</td>
             <td>${vehicle}</td>
             <td>${date}</td>
+            <td>${returnDate}</td>
             <td>${termsAccepted ? 'Yes' : 'No'}</td>
         `;
         tableBody.appendChild(newRow);

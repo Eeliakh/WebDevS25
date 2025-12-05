@@ -62,6 +62,11 @@
                 <input id="date" name="date" type="date">
                 <div class="error" id="dateError">Please select a rental date.</div>
             </div>
+            <div class="form-row">
+                <label for="returnDate">Return Date</label>
+                <input id="returnDate" name="returnDate" type="date">
+                <div class="error" id="returnDateError">Please select a return date.</div>
+            </div>
 
             <div class="form-row terms-row">
                 <label for="terms">I accept the terms and conditions <input type="checkbox" id="terms" name="terms"></label>
@@ -77,7 +82,7 @@
         </form>
     </section>
 
-    <section class="table-section">
+    <section class="visually-hidden"><section class="table-section">
         <h2>Current Bookings</h2>
         <table id="bookingsTable">
             <thead>
