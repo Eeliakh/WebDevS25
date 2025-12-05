@@ -331,7 +331,6 @@ tr:hover {
     border-radius: 5px;
     margin-bottom: 1em;
 }
-/* Lievempi hover-efekti slide-kuville */
 .slide img {
     width: 100%;
     border-radius: 10px;
@@ -339,11 +338,11 @@ tr:hover {
 }
 
 .slide:hover img {
-    transform: scale(1.00); /* vain kevyt zoom */
-    box-shadow: 0 0 10px #00ffff, 0 0 10px #ff00ff; /* lievempi neon-hehku */
+    transform: scale(1.00);
+    box-shadow: 0 0 10px #00ffff, 0 0 10px #ff00ff;
 }
 
-/* Caption lievempi neon-hehku hoverilla */
+
 .slide-caption {
     transition: text-shadow 0.4s ease, color 0.4s ease;
 }
@@ -353,4 +352,52 @@ tr:hover {
     text-shadow:
         0 0 2px #ff00ff,
         0 0 5px #00ffff;
+}
+.cta {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #000;
+    background: #00ffff;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #00ffff, 0 0 25px #00ffff55;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.4) 50%,
+        transparent 100%
+    );
+    transition: 0.5s;
+}
+.cta-btn:hover {
+    background: #ff00ff;
+    color: #fff;
+    box-shadow: 0 0 18px #ff00ff, 0 0 30px #ff00ff77;
+    transform: translateY(-3px);
+}
+
+.cta-btn:hover::before {
+    left: 100%;
+}
+
+.cta-btn:active {
+    transform: scale(0.95);
 }
